@@ -1,0 +1,24 @@
+"use strict";
+
+var appRoot = document.getElementById('app');
+var button = 'Show Details';
+var details = '';
+var showDetails = function showDetails() {
+  if (button === 'Show Details') {
+    button = 'Hide Detials';
+    details = 'This is created by Shashikant :)';
+    Render();
+  } else {
+    button = 'Show Details';
+    details = '';
+    Render();
+  }
+};
+var Render = function Render() {
+  var template = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "Visibility Toggle!"), /*#__PURE__*/React.createElement("button", {
+    onClick: showDetails
+  }, button), /*#__PURE__*/React.createElement("p", null, details));
+  ReactDOM.render(template, appRoot);
+};
+Render();
+"use strict";
